@@ -257,6 +257,7 @@ def reset_token(token):
     return render_template('reset_token.html', title='Reset Password', form=form)
 
 
+
 # @app.route('/search')
 # def search():
 #     posts = Post.query.whoosh_search(request.args.get('query')).all()
