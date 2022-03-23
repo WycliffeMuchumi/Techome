@@ -1,17 +1,13 @@
-from main import db, login_manager, app
+from app import db, login_manager, app
 from flask_login import UserMixin, current_user
 from datetime import datetime
 from wtforms.validators import ValidationError
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-# import flask_whooshalchemy as wa
-
 
 # The below decorator reloads user from the user_id stored in the session
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
-
 
 # This is a user model
 class User(db.Model, UserMixin):
@@ -88,9 +84,6 @@ class Post(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     post_content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-
-
-# wa.whoosh_index(app, Post)
 
 
 def __repr__(self):
