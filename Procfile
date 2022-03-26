@@ -1,1 +1,1 @@
-web: gunicorn run:Techome
+web: gunicorn run:app
