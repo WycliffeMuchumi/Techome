@@ -2,7 +2,7 @@ from main import db, login_manager, app
 from flask_login import UserMixin, current_user
 from datetime import datetime
 from wtforms.validators import ValidationError
-# from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
 # The below decorator reloads user from the user_id stored in the session
 @login_manager.user_loader
