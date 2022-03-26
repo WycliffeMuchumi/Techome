@@ -1,10 +1,10 @@
-class Development:
+# class Development:
     # database name://user:password:localhost:port/dbname e.g postgresql://postgres:12121994@127.0.0.1.5432/PetManagementSystem
     # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:12121994@127.0.0.1:5432/Techome'
     # DEBUG = True  # since we are in development mode
     # SECRET_KEY = "12121994"
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
-    Pass
+    # Pass
 
 
 class Production:
