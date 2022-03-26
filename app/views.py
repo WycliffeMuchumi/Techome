@@ -1,10 +1,10 @@
 import secrets, os
 from PIL import Image
-from main import app, db, bcrypt
+from app.main import app, db, bcrypt
 from flask import Flask, render_template, url_for, redirect, flash, request, abort
-from forms import SignUpForm, LoginForm, UpdateSignUpForm, PostForm, RequestResetForm, PasswordResetForm
+from app.forms import SignUpForm, LoginForm, UpdateSignUpForm, PostForm, RequestResetForm, PasswordResetForm
 from flask_login import login_user, current_user, logout_user, login_required
-from models import User, Post
+from app.models import User, Post
 
 @app.before_first_request
 def create_table():
