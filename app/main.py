@@ -5,7 +5,7 @@ from flask_login import LoginManager
 from flask_mail import Mail, Message
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
-from configs.config import Development, Production
+from configs.config import Production
 
 app = Flask(__name__)
 
